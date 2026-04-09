@@ -11,10 +11,29 @@
     <a href="../index.html">Home</a>
     <a href="index.html">Projects</a> <a href="../resume/index.html">Resume</a>
     <a href="../contact/index.html">Contact</a>
-    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://github.com/kanglee05" target="_blank">GitHub</a>
     </nav>
 
     <h1>Contact Me</h1>
-    <p>Feel free to reach out via email or LinkedIn.</p>
+    <p>Feel free to reach out using the form below.</p>
+
+    <form action="mailto:YOUR_EMAIL@ucsd.edu" method="POST" enctype="text/plain">
+        <label>
+            Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
+            Subject:
+            <input name="subject">
+        </label>
+
+        <label>
+            Message:
+            <textarea name="body"></textarea>
+        </label>
+
+        <button>Send Email</button>
+    </form>
 </body>
 </html>
