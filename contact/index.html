@@ -13,23 +13,17 @@
     <h1>Contact Me</h1>
     <p>Feel free to reach out using the form below.</p>
 
-    <form action="mailto:YOUR_EMAIL@ucsd.edu" method="POST" enctype="text/plain">
-        <label>
-            Email:
-            <input type="email" name="email" required>
-        </label>
+    <form action="mailto:kanglee@ucsd.edu"> <label>
+        Subject
+        <input type="text" name="subject" required>
+    </label>
+    
+    <label>
+        Message
+        <textarea name="body" required></textarea>
+    </label>
 
-        <label>
-            Subject:
-            <input name="subject">
-        </label>
-
-        <label>
-            Message:
-            <textarea name="body"></textarea>
-        </label>
-
-        <button>Send Email</button>
+    <button type="submit">Send Message</button>
     </form>
 </body>
 </html>
