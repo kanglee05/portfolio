@@ -2,6 +2,8 @@
 :root {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
+  /* Enable automatic dark mode based on OS settings */
+  color-scheme: light dark; 
 }
 
 /* --- Page Layout --- */
@@ -27,7 +29,9 @@ h1 {
 nav {
   display: flex;
   margin-bottom: 2em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  /* Adaptive border color */
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav ul, 
@@ -44,14 +48,16 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
+  /* Use the adaptive border variable */
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  /* Adaptive hover background using color-mix */
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 /* --- Resume Styling --- */
@@ -70,7 +76,7 @@ section h2 {
 
 article header {
   display: flex;
-  justify-content: space-between; /* Pushes content to opposite sides */
+  justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
   margin-bottom: 0.5em;
@@ -118,7 +124,8 @@ label {
   align-items: center;
 }
 
-input, textarea, button {
+/* Added 'select' here for the theme switcher */
+input, textarea, button, select {
   font: inherit;
 }
 
@@ -140,4 +147,13 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* --- Dark Mode Switcher Positioning --- */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
 }
