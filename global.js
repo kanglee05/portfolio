@@ -113,3 +113,67 @@ form?.addEventListener('submit', function (event) {
   // 6. Open the mail client with the perfectly formatted URL
   location.href = url;
 });
+
+// --- Step 1.2: Fetch JSON Data ---
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    
+    // Log the response to verify it's working (you can see this in the DevTools console)
+    console.log(response);
+
+    // Check if the request was successful
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+    // Parse the response into a JSON object
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+// --- Step 1.4: Render Projects ---
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Validate container
+  if (!containerElement) {
+    console.error('Invalid container element provided to renderProjects.');
+    return;
+  }
+
+  // Validate heading level (fallback to h2 if invalid)
+  const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  const h = validHeadings.includes(headingLevel) ? headingLevel : 'h2';
+
+  // Clear existing content to prevent duplicates
+  containerElement.innerHTML = '';
+
+  // Loop through the projects array
+  for (let project of projects) {
+    const article = document.createElement('article');
+    
+    // Handle missing data gracefully by using logical OR (||)
+    const title = project.title || 'Untitled Project';
+    const image = project.image || 'https://vis-society.github.io/labs/2/images/empty.svg';
+    const desc = project.description || 'No description available.';
+    const year = project.year || 'N/A';
+
+    article.innerHTML = `
+      <${h}>${title}</${h}>
+      <img src="${image}" alt="${title}">
+      <p>${desc}</p>
+      <p style="font-family: var(--font-family-sans); color: var(--color-muted);">c. ${year}</p>
+    `;
+    
+    containerElement.appendChild(article);
+  }
+}
+
+// --- Step 3.2: Fetch GitHub Data ---
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

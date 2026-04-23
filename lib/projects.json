@@ -1,0 +1,74 @@
+[
+  {
+    "title": "SurfCast SD",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Predicting waves for surfers in San Diego."
+  },
+  {
+    "title": "Pacific Pulse",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A Plotly-based dashboard projecting anchovy sightings and water quality."
+  },
+  {
+    "title": "Recipes and Ratings",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Predicted calorie counts and user satisfaction using regression models on 200,000 Food.com entries."
+  },
+  {
+    "title": "Membership Growth Projections",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Automated reporting and advanced data science applications for predictive analytics."
+  },
+  {
+    "title": "Player Performance Modeling",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed predictive models for game outcomes and player statistics."
+  },
+  {
+    "title": "Macroeconomic Model Simulator",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Mathematical modeling of economic concepts including GDP, labor market equilibrium, and Okun's Law."
+  },
+  {
+    "title": "CNN Image Classifier",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built and trained a single-layer convolutional neural network for image recognition."
+  },
+  {
+    "title": "Interactive Portfolio Website",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A responsive personal portfolio website built with HTML, CSS, and vanilla JavaScript."
+  },
+  {
+    "title": "Movies Correlation",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Exploring 40 years of movies."
+  },
+  {
+    "title": "Job Layoffs",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Exploring job layoffs 2019-2023."
+  },
+  {
+    "title": "Basketball 1v1",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Python basketball 1v1 game."
+  },
+  {
+    "title": "Tic-Tac-Toe",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Tic-Tac-Toe game in Python."
+  }
+]

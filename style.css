@@ -102,7 +102,7 @@ time {
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 4;
   gap: 0.5em;
 }
 
@@ -156,4 +156,26 @@ img {
   right: 1rem;
   font-size: 80%;
   font-family: inherit;
+}
+
+/* --- GitHub Stats Grid --- */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 1em;
+  text-align: center;
+}
+
+#profile-stats dt {
+  grid-row: 1; /* Forces all headers to the top row */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: var(--color-accent);
+}
+
+#profile-stats dd {
+  grid-row: 2; /* Forces all numbers to the bottom row */
+  margin: 0; /* Removes default browser indentation */
+  font-size: 2em;
 }
