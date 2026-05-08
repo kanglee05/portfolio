@@ -9,7 +9,8 @@ let pages = [
   { url: 'projects/', title: 'Projects' },
   { url: 'resume/', title: 'Resume' },
   { url: 'contact/', title: 'Contact' },
-  { url: 'https://github.com/kanglee05', title: 'GitHub' } 
+  { url: 'https://github.com/kanglee05', title: 'GitHub' },
+  { url: 'meta/', title: 'Meta' }
 ];
 
 let nav = document.createElement('nav');
@@ -174,6 +175,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 }
 
 // --- Step 3.2: Fetch GitHub Data ---
-export async function fetchGitHubData(username) {
+export async function fetchGitHubData(kanglee05) {
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
